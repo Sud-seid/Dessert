@@ -21,7 +21,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             `font-bold text-3xl z-10 ${isActive ? 'text-blue-violet' : ''}`
           }
-          style={{ fontFamily: 'Pacifico, cursive', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+          style={{ color: '#8A2BE2', fontFamily: 'Pacifico, cursive', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
         >
           Shifa Delights
         </NavLink>
@@ -44,7 +44,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `mx-4 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+              `mx-4 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                 isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
               }`
             }
@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              `mx-4 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+              `mx-4 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                 isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
               }`
             }
@@ -64,7 +64,7 @@ const Navbar = () => {
           <NavLink
             to="/products"
             className={({ isActive }) =>
-              `mx-4 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+              `mx-4 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                 isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
               }`
             }
@@ -74,7 +74,7 @@ const Navbar = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `mx-4 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+              `mx-4 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                 isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
               }`
             }
@@ -88,7 +88,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `py-2 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+                `py-2 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                   isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
                 }`
               }
@@ -99,7 +99,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `py-2 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+                `py-2 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                   isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
                 }`
               }
@@ -110,7 +110,7 @@ const Navbar = () => {
             <NavLink
               to="/products"
               className={({ isActive }) =>
-                `py-2 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+                `py-2 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                   isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
                 }`
               }
@@ -121,7 +121,7 @@ const Navbar = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `py-2 focus:outline-none focus:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
+                `py-2 focus:outline-none focus:text-blue-violet hover:text-blue-violet focus:border-b-2 focus:border-blue-violet ${
                   isActive ? 'text-blue-violet border-b-2 border-blue-violet' : ''
                 }`
               }

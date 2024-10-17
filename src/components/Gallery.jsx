@@ -14,7 +14,7 @@ const Gallery = () => {
 
   return (
     <div
-      className="h-screen flex flex-col items-center justify-start relative w-full h-[35rem]"
+      className="h-screen flex flex-col items-center justify-start relative w-full h-[32rem]"
       style={{
         backgroundImage: 'url("/src/assets/hero-image.jpg")',
         backgroundSize: 'cover',
@@ -25,14 +25,21 @@ const Gallery = () => {
       <h2 className="text-4xl font-bold text-center text-white relative z-10 mt-10">
         Our Chocolate Collection
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10 mt-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 relative z-10 mt-12 px-4 md:px-8">
         {images.map((img, index) => (
-          <div key={index} className="rounded-lg shadow-lg overflow-hidden">
-            <img
-              src={img.src}
-              alt={img.name}
-              className="w-[17rem] h-[17rem] object-cover"
-            />
+          <div key={index} className="flex flex-col items-center">
+            <div
+              className="rounded-lg shadow-lg overflow-hidden border-1 border-violet-500 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2"
+              style={{
+                boxShadow: '0 6px 15px rgba(138, 43, 226, 0.5)',
+              }}
+            >
+              <img
+                src={img.src}
+                alt={img.name}
+                className="w-full h-[14rem] object-cover md:w-[14rem] md:h-[14rem]"
+              />
+            </div>
             <p className="text-center text-white mt-2">{img.name}</p>
           </div>
         ))}

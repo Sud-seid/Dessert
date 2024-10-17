@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'logo': ['Pacifico', 'cursive'],
       },
+      colors: {
+        'blue-violet': '#8A2BE2', 
+      },
     },
   },
   plugins: [],
