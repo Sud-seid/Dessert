@@ -4,7 +4,6 @@ const Products = () => {
   const products = [
     { name: 'Dark Chocolate', price: '$10', img: '/src/assets/chocolate1.jpg' },
     { name: 'Milk Chocolate', price: '$12', img: '/src/assets/chocolate2.jpg' },
-    // Add more products as needed
   ];
 
   return (
