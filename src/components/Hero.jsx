@@ -30,9 +30,9 @@ const Hero = () => {
           </NavLink>
         </h1>
         <p className="text-base md:text-lg mt-4">
-          Discover the world of rich, decadent chocolates crafted from the finest ingredients. 
-          Our chocolates are not just a treat; they are an experience that transports you to a realm of indulgence. 
-          Treat yourself to our exquisite range of flavors and textures that will delight your senses and leave you craving more.
+        Explore our world of irresistible desserts, handcrafted to perfection with the finest ingredients. 
+          Whether you're craving a classic treat or something unique, Shifa Delights offers a wide range of indulgent desserts 
+          that will satisfy your sweet tooth and elevate your dessert experience.
         </p>
 
         <button className="mt-6 px-4 py-2 md:px-6 md:py-3 rounded-lg bg-blue-violet text-white hover:bg-indigo-900">

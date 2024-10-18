@@ -56,7 +56,7 @@ const Gallery = () => {
         className={`flex flex-col items-center border-1 border-violet-500 p-4 rounded-lg cursor-pointer ${
           currentIndex === index ? 'translate-y-4' : ''
         } transition-transform duration-150 ease-out`}
-        style={{ transform: currentIndex === index ? 'translateY(20px)' : 'none'  , boxShadow: '2px 5px 2px 5px rgba(138, 43, 226, 0.5)'}}
+        style={{ transform: currentIndex === index ? 'translateY(20px)' : 'none'  , boxShadow: '1px 1px 9px 1px rgba(138, 43, 226, 0.5)'}}
       >
       
             <div
@@ -88,7 +88,7 @@ const Gallery = () => {
       </div>
 
 
-      <div className="flex justify-center mt-6 space-x-2 relative z-10">
+      <div className="flex justify-center mt-14 space-x-3 relative z-10">
         {images.map((_, index) => (
           <span
             key={index}
