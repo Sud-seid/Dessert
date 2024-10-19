@@ -11,6 +11,7 @@ const Hero = () => {
         backgroundPosition: 'center',
       }}
     >
+
       <div className="absolute inset-0 bg-black bg-opacity-85"></div>
       <div className="text-center text-white relative z-10 p-6 md:p-24 lg:p-[9.6rem]">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
@@ -26,6 +27,7 @@ const Hero = () => {
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
           >
+
             Shifa Delights
           </NavLink>
         </h1>
@@ -42,5 +44,6 @@ const Hero = () => {
     </div>
   );
 };
+
 
 export default Hero;
