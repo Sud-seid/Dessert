@@ -1,12 +1,12 @@
 import React from 'react';
-import img2 from '../assets/cake2.jpg';
+import img2 from '/assets/cake2.jpg';
 
 const About = () => {
   return (
     <div
       className="min-h-screen flex justify-center items-center relative w-full"
       style={{
-        backgroundImage: 'url("/src/assets/hero-image1.jpg")',
+        backgroundImage: 'url("/assets/hero-image1.jpg")', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -14,7 +14,6 @@ const About = () => {
       <div className="absolute inset-0 bg-black bg-opacity-90"></div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center md:space-x-8 p-6 sm:p-4 w-full max-w-screen-lg">
-        
         <div className="md:w-1/2 mb-8 md:mb-0 px-4 sm:px-2">
           <h2 className="text-3xl sm:text-4xl font-bold text-center md:text-left mb-4 text-white">About Us</h2>
           <p className="text-base sm:text-lg text-white text-center md:text-left mb-4">

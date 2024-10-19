@@ -5,7 +5,7 @@ const Contact = () => {
     <div
       className="min-h-screen flex justify-center items-center relative w-full"
       style={{
-        backgroundImage: 'url("/src/assets/hero-image1.jpg")',
+        backgroundImage: 'url("/assets/hero-image1.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import img1 from '../assets/cake1.jpg';
-import img3 from '../assets/cake3.jpg';
-import img4 from '../assets/cake4.jpg';
 
 const Gallery = () => {
   const images = [
-    { src: img1, name: 'Black Forest Cake', price: '1298 ETB' },
-    { src: img3, name: 'Vanilla Cake', price: '998 ETB' },
-    { src: img4, name: 'Fruit Cake', price: '899 ETB' },
+    { src: '/cake1.jpg', name: 'Black Forest Cake', price: '1298 ETB' },
+    { src: '/cake3.jpg', name: 'Vanilla Cake', price: '998 ETB' },
+    { src: '/cake4.jpg', name: 'Fruit Cake', price: '899 ETB' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-
 
   const handleBoxClick = (index) => {
     setCurrentIndex(index);
@@ -37,7 +33,7 @@ const Gallery = () => {
     <div
       className="flex flex-col items-center justify-start relative w-full min-h-screen"
       style={{
-        backgroundImage: 'url("/src/assets/hero-image.jpg")',
+        backgroundImage: 'url("/hero-image.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -47,21 +43,19 @@ const Gallery = () => {
         Most Popular Desserts
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10 mt-12 px-4 md:px-8">
-      
         {images.map((img, index) => (
-        <div
-        key={index}
-        onClick={() => handleBoxClick(index)}
-        
-        className={`flex flex-col items-center border-1 border-violet-500 p-4 rounded-lg cursor-pointer ${
-          currentIndex === index ? 'translate-y-4' : ''
-        } transition-transform duration-150 ease-out`}
-        style={{ transform: currentIndex === index ? 'translateY(20px)' : 'none'  , boxShadow: '1px 1px 9px 1px rgba(138, 43, 226, 0.5)'}}
-      >
-      
-            <div
-              className="rounded-lg shadow-lg overflow-hidden w-full"
-            >
+          <div
+            key={index}
+            onClick={() => handleBoxClick(index)}
+            className={`flex flex-col items-center border-1 border-violet-500 p-4 rounded-lg cursor-pointer ${
+              currentIndex === index ? 'translate-y-4' : ''
+            } transition-transform duration-150 ease-out`}
+            style={{
+              transform: currentIndex === index ? 'translateY(20px)' : 'none',
+              boxShadow: '1px 1px 9px 1px rgba(138, 43, 226, 0.5)',
+            }}
+          >
+            <div className="rounded-lg shadow-lg overflow-hidden w-full">
               <img
                 src={img.src}
                 alt={img.name}
@@ -87,16 +81,13 @@ const Gallery = () => {
         ))}
       </div>
 
-
       <div className="flex justify-center mt-14 space-x-3 relative z-10">
         {images.map((_, index) => (
           <span
             key={index}
             onClick={() => handleBoxClick(index)}
             className={`w-3 h-3 rounded-full ${
-              currentIndex === index
-                ? 'transform translate-y-1'
-                : ''
+              currentIndex === index ? 'transform translate-y-1' : ''
             } transition-transform duration-150 cursor-pointer`}
             style={{
               backgroundColor: currentIndex === index ? '#8A2BE2' : '#ccc',

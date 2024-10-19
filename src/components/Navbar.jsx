@@ -8,14 +8,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white py-4 shadow-lg border-b border-white" style={{
-      backgroundImage: 'url("/src/assets/hero-image1.jpg")',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}>
+    <nav
+      className="text-white py-4 shadow-lg border-b border-white"
+      style={{
+        backgroundImage: 'url("/assets/hero-image1.jpg")', 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg"></div>
       <div className="relative mx-auto px-12 md:px-28 lg:px-[7rem] flex justify-between items-center">
-        
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -25,11 +27,7 @@ const Navbar = () => {
         >
           Shifa Delights
         </NavLink>
-        
-        <button
-          className="block md:hidden z-10"
-          onClick={toggleMenu}
-        >
+        <button className="block md:hidden z-10" onClick={toggleMenu}>
           <svg
             className="w-6 h-6 text-white"
             fill="none"

@@ -2,19 +2,19 @@ import React from 'react';
 
 const Products = () => {
   const products = [
-    { name: 'Dark Chocolate', price: '$10', img: '/src/assets/dessert1.jpg' },
-    { name: 'Milk Chocolate', price: '$12', img: '/src/assets/dessert2.jpg' },
-    { name: 'Dark Chocolate', price: '$10', img: '/src/assets/dessert3.jpg' },
-    { name: 'Milk Chocolate', price: '$12', img: '/src/assets/dessert4.jpg' },
-    { name: 'Dark Chocolate', price: '$10', img: '/src/assets/dessert5.jpg' },
-    { name: 'Milk Chocolate', price: '$12', img: '/src/assets/dessert6.jpg' },
+    { name: 'Dark Chocolate', price: '$10', img: '/assets/dessert1.jpg' }, 
+    { name: 'Milk Chocolate', price: '$12', img: '/assets/dessert2.jpg' }, 
+    { name: 'Dark Chocolate', price: '$10', img: '/assets/dessert3.jpg' }, 
+    { name: 'Milk Chocolate', price: '$12', img: '/assets/dessert4.jpg' }, 
+    { name: 'Dark Chocolate', price: '$10', img: '/assets/dessert5.jpg' }, 
+    { name: 'Milk Chocolate', price: '$12', img: '/assets/dessert6.jpg' }, 
   ];
 
   return (
     <div
       className="min-h-screen flex flex-col justify-center items-center relative w-full"
       style={{
-        backgroundImage: 'url("/src/assets/hero-image1.jpg")',
+        backgroundImage: 'url("/assets/hero-image1.jpg")', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
