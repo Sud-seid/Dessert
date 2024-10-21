@@ -10,7 +10,7 @@ const Footer = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-lg"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-99 backdrop-blur-lg"></div>
       <div className="relative container mx-auto text-center">
         <p>&copy; 2024 Shifa Delights. All rights reserved.</p>
       </div>

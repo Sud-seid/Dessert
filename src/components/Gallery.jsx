@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 
 const Gallery = () => {
-  const images = [
-    { src: '/cake1.jpg', name: 'Black Forest Cake', price: '1298 ETB' },
-    { src: '/cake3.jpg', name: 'Vanilla Cake', price: '998 ETB' },
-    { src: '/cake4.jpg', name: 'Fruit Cake', price: '899 ETB' },
+  const initialImages = [
+    { src: '/assets/cake1.jpg', name: 'Black Forest Cake', price: '1298 ETB' },
+    { src: '/assets/cake3.jpg', name: 'Vanilla Cake', price: '998 ETB' },
+    { src: '/assets/cake4.jpg', name: 'Fruit Cake', price: '899 ETB' },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [images, setImages] = useState(initialImages); 
+  const [showMore, setShowMore] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
+  const [selectedCake, setSelectedCake] = useState(null);
 
-  const handleBoxClick = (index) => {
-    setCurrentIndex(index);
+  const handleShowMore = () => {
+    setShowMore(true);
+    setImages((prevImages) => [...prevImages, ...initialImages]); 
   };
-
+  const handleBuyNow = (cake) => {
+    setSelectedCake(cake);
+    setShowModal(true);
+  };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   const renderStars = () => (
     <div className="flex">
       {[...Array(5)].map((_, i) => (
@@ -33,7 +43,7 @@ const Gallery = () => {
     <div
       className="flex flex-col items-center justify-start relative w-full min-h-screen"
       style={{
-        backgroundImage: 'url("/hero-image.jpg")',
+        backgroundImage: 'url("/assets/hero-image.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -46,12 +56,8 @@ const Gallery = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            onClick={() => handleBoxClick(index)}
-            className={`flex flex-col items-center border-1 border-violet-500 p-4 rounded-lg cursor-pointer ${
-              currentIndex === index ? 'translate-y-4' : ''
-            } transition-transform duration-150 ease-out`}
+            className="flex flex-col items-center border-1 border-violet-500 p-4 rounded-lg cursor-pointer"
             style={{
-              transform: currentIndex === index ? 'translateY(20px)' : 'none',
               boxShadow: '1px 1px 9px 1px rgba(138, 43, 226, 0.5)',
             }}
           >
@@ -68,8 +74,9 @@ const Gallery = () => {
                 <button
                   className="text-white px-3 py-1 rounded hover:bg-[#8A2BE2] transition"
                   style={{ backgroundColor: '#8A2BE2' }}
+                  onClick={() => handleBuyNow(img)}
                 >
-                  Add to Cart
+                  Buy Now
                 </button>
               </div>
               <div className="flex justify-between items-center mt-2 w-full">
@@ -80,21 +87,44 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-
-      <div className="flex justify-center mt-14 space-x-3 relative z-10">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            onClick={() => handleBoxClick(index)}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? 'transform translate-y-1' : ''
-            } transition-transform duration-150 cursor-pointer`}
-            style={{
-              backgroundColor: currentIndex === index ? '#8A2BE2' : '#ccc',
-            }}
-          ></span>
-        ))}
-      </div>
+      {!showMore && (
+        <button
+          onClick={handleShowMore}
+          className="mt-10 bg-[#8A2BE2] text-white px-6 py-2 rounded hover:bg-[#6f20a1] transition"
+        >
+          Show More
+        </button>
+      )}
+      {showModal && selectedCake && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+            <h3 className="text-2xl font-bold text-center mb-4">{selectedCake.name}</h3>
+            <div className="mb-4">
+              <p className="text-center text-lg font-semibold">{selectedCake.price}</p>
+              <div className="flex justify-center my-2">{renderStars()}</div>
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2">Bank Account Information:</label>
+              <input
+                type="text"
+                placeholder="Enter bank account"
+                className="border p-2 w-full rounded"
+              />
+            </div>
+            <div className="flex justify-between mt-6">
+              <button
+                onClick={handleCloseModal}
+                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700"
+              >
+                Close
+              </button>
+              <button className="bg-[#8A2BE2] text-white px-4 py-2 rounded hover:bg-[#6f20a1]">
+                Confirm Purchase
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
